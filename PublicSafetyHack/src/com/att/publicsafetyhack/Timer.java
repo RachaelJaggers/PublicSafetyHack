@@ -1,5 +1,6 @@
-package com.att.publicsafetyhack;
+package cs2114.restaurant;
 
+import android.widget.ImageView;
 import android.widget.ToggleButton;
 import android.app.Activity;
 import android.os.Bundle;
@@ -15,8 +16,9 @@ public class Timer
     public class TimerDemo
         extends Activity
     {
-        /** Called when the activity is first created. */
+
         private TextView textTimer;
+        private ImageView image1;
         private Button   startButton;
         private Button   pauseButton;
         private long     startTime     = 0L;
@@ -30,11 +32,15 @@ public class Timer
             boolean on = ((ToggleButton)view).isChecked();
             if (on)
             {
-                //
+                startTime = SystemClock.uptimeMillis();
+                myHandler.postDelayed(updateTimerMethod, 0);
             }
-            else
+            else //off
             {
+                timeSwap += timeInMillies;
+                myHandler.removeCallbacks(updateTimerMethod);
 
+                image1.setImageResource(R.drawable.gray);
             }
         }
 
@@ -45,6 +51,7 @@ public class Timer
             setContentView(R.layout.missioncontrolscreen);
 
             textTimer = (TextView)findViewById(R.id.textTimer);
+            image1 = (ImageView)findViewById(R.id.image1);
 
 
 

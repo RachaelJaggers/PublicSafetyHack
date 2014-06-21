@@ -1,8 +1,8 @@
-//package com.att.publicsafetyhack
+package cs2114.restaurant;
 
-//import sofia.app.Screen;
+import sofia.app.Screen;
 
-/*public class missionControlScreen extends Screen
+public class missionControlScreen extends Screen
 {
     public void initialize()
     {
@@ -10,4 +10,3 @@
     }
 
 }
-*/
