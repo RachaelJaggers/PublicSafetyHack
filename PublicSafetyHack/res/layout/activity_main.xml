@@ -70,7 +70,7 @@
         android:layout_y="200dp"
         android:text="@array/team_array" />
 
-<CheckBox
+	<CheckBox
         android:id="@+id/checkBox4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -86,7 +86,7 @@
         android:layout_x="150dp"
         android:layout_y="280dp"
         android:text="@array/team_array" />
-    
+   
     <Button
         android:id="@+id/button1"
         android:layout_width="200dp"
