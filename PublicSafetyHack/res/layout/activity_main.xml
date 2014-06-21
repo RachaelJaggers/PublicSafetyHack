@@ -6,20 +6,12 @@
     tools:context="com.att.publicsafetyhack.MainActivity"
     tools:ignore="MergeRootFrame" >
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_x="60dp"
-        android:layout_y="300dp"
-        android:text="@string/launch_mission" />
-
     <TextView
         android:id="@+id/textView1"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_x="10dp"
-        android:layout_y="10dp"
+        android:layout_y="25dp"
         android:text="@string/mission"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -65,19 +57,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:text="RadioButton" />
+            android:text="@array/team_array" />
 
         <RadioButton
             android:id="@+id/radio1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:text="@array/team_array" />
 
         <RadioButton
             android:id="@+id/radio2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:text="@array/team_array" />
     </RadioGroup>
+    
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_x="60dp"
+        android:layout_y="350dp"
+        android:text="@string/launch_mission" />
 
 </AbsoluteLayout>

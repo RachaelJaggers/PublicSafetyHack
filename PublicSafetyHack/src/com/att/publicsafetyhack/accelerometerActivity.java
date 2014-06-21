@@ -1,4 +1,5 @@
 package com.att.publicsafetyhack;
+
 import android.graphics.Color;
 import android.view.View;
 import android.hardware.SensorManager;
@@ -7,88 +8,74 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.app.Activity;
+//import "https://m2x.att.com/feed/ecbc11c0d0220ff36790d68e0ecb798d";
 
-public class accelerometerActivity
-    extends Activity
-    implements SensorEventListener
-{
+import com.att.m2x.*;
 
-    private SensorManager manager;
+public class accelerometerActivity extends Activity implements
+		SensorEventListener {
 
-    private View          background;
-    private Long          lastUpdate;
+	private SensorManager manager;
 
+	private View background;
+	private Long lastUpdate;
 
-    public void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
 
-        background.setBackgroundColor(Color.GREEN);
+		M2X.getInstance().setMasterKey("6c3062728a1057788701297df55f95b3");
 
-        manager = (SensorManager)getSystemService(SENSOR_SERVICE);
-        lastUpdate = System.currentTimeMillis();
-    }
+		background.setBackgroundColor(Color.GREEN);
 
+		manager = (SensorManager) getSystemService(SENSOR_SERVICE);
+		lastUpdate = System.currentTimeMillis();
+	}
 
-    public void onAccuracyChanged(Sensor arg0, int arg1)
-    {
-        // nah
-    }
+	public void onAccuracyChanged(Sensor arg0, int arg1) {
+		// nah
+	}
 
+	public void onSensorChanged(SensorEvent change) {
+		if (change.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
+			getAccelerometerValue(change);
+		}
 
-    public void onSensorChanged(SensorEvent change)
-    {
-        if (change.sensor.getType() == Sensor.TYPE_ACCELEROMETER)
-        {
-            getAccelerometerValue(change);
-        }
+	}
 
-    }
+	public void getAccelerometerValue(SensorEvent sensorEvent) {
+		float[] accelerometerValue = sensorEvent.values;
 
+		float x = accelerometerValue[0];
+		float y = accelerometerValue[1];
+		float z = accelerometerValue[2];
 
-    public void getAccelerometerValue(SensorEvent sensorEvent)
-    {
-        float[] accelerometerValue = sensorEvent.values;
+		float accelerationSquareRoot = (((x * x) + (y * y) + (z * z)) / (manager.GRAVITY_EARTH * manager.GRAVITY_EARTH));
 
-        float x = accelerometerValue[0];
-        float y = accelerometerValue[1];
-        float z = accelerometerValue[2];
+		float acceleration = (float) Math.sqrt(accelerationSquareRoot);
 
-        float accelerationSquareRoot =
-            (((x * x) + (y * y) + (z * z)) / (manager.GRAVITY_EARTH * manager.GRAVITY_EARTH));
+		long actualTime = sensorEvent.timestamp;
 
-        float acceleration = (float)Math.sqrt(accelerationSquareRoot);
+		if (acceleration > 5) {
+			if ((actualTime - lastUpdate) < 200) {
+				return;
+			}
+			lastUpdate = actualTime;
+			background.setBackgroundColor(Color.GREEN);
+		} else {
+			background.setBackgroundColor(Color.RED);
+		}
+	}
 
-        long actualTime = sensorEvent.timestamp;
+	protected void onResume() {
+		super.onResume();
+		manager.registerListener(this,
+				manager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
+				manager.SENSOR_DELAY_NORMAL);
+	}
 
-        if (acceleration > 5)
-        {
-            if ((actualTime - lastUpdate) < 200)
-            {
-                return;
-            }
-            lastUpdate = actualTime;
-            background.setBackgroundColor(Color.GREEN);
-        }
-        else
-        {
-            background.setBackgroundColor(Color.RED);
-        }
-    }
-
-    protected void onResume()
-    {
-        super.onResume();
-        manager.registerListener(
-            this,
-            manager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
-            manager.SENSOR_DELAY_NORMAL);
-    }
-
-    protected void onPause()
-    {
-        super.onPause();
-        manager.unregisterListener(this);
-    }
+	protected void onPause() {
+		super.onPause();
+		manager.unregisterListener(this);
+	}
 
 }
