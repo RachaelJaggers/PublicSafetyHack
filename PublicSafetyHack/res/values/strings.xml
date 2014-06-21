@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
+
     <string name="app_name">YourSpace</string>
     <string name="action_settings">Settings</string>
-<<<<<<< HEAD
-	<string name="launch_mission">Launch Mission</string>
-
-</resources>
-=======
+    <string name="launch_mission">Launch Mission</string>
     <string name="login_home">Welcome to YourSpace</string>
     <string name="prompt_username">ATT UID</string>
     <string name="login">Login</string>
@@ -25,6 +22,7 @@
     <string name="city_prompt">Select City</string>
     <string name="building_prompt">Select Building</string>
     <string name="floor_prompt">Select Floor</string>
+
     <string-array name="drawer_array">
         <item>List</item>
         <item>Map</item>
@@ -35,9 +33,11 @@
         <item>About</item>
         <item>Logout</item>
     </string-array>
+
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
     <string name="countryPrompt">Pick Your Country.</string>
+
     <string-array name="countryArray">
         <item>USA</item>
         <item>UK</item>
@@ -90,5 +90,5 @@
         <item>July</item>
         <item>August</item>
     </string-array>
+
 </resources>
->>>>>>> FETCH_HEAD

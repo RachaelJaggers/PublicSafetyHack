@@ -37,12 +37,8 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-<<<<<<< HEAD
-        public static final int action_settings=0x7f080002;
-        public static final int button1=0x7f080001;
-        public static final int container=0x7f080000;
-=======
-        public static final int action_settings=0x7f0a0009;
+        public static final int action_settings=0x7f0a000a;
+        public static final int button1=0x7f0a0009;
         public static final int container=0x7f0a0008;
         public static final int imageView1=0x7f0a0003;
         public static final int login=0x7f0a0006;
@@ -52,7 +48,6 @@ public final class R {
         public static final int login_status_message=0x7f0a0001;
         public static final int prompt_password=0x7f0a0005;
         public static final int prompt_username=0x7f0a0004;
->>>>>>> FETCH_HEAD
     }
     public static final class layout {
         public static final int activity_login=0x7f030000;
@@ -63,47 +58,43 @@ public final class R {
         public static final int main=0x7f090000;
     }
     public static final class string {
-        public static final int action_forgot_password=0x7f05001c;
+        public static final int action_forgot_password=0x7f05001d;
         public static final int action_settings=0x7f050001;
-        public static final int action_sign_in_register=0x7f05001a;
-        public static final int action_sign_in_short=0x7f05001b;
+        public static final int action_sign_in_register=0x7f05001b;
+        public static final int action_sign_in_short=0x7f05001c;
         public static final int app_name=0x7f050000;
-<<<<<<< HEAD
-        public static final int hello_world=0x7f050001;
-        public static final int launch_mission=0x7f050003;
-=======
-        public static final int building_hint=0x7f05000d;
-        public static final int building_prompt=0x7f050012;
-        public static final int city_hint=0x7f05000c;
-        public static final int city_prompt=0x7f050011;
-        public static final int countryPrompt=0x7f050016;
-        public static final int country_hint=0x7f05000a;
-        public static final int country_prompt=0x7f05000f;
-        public static final int drawer_close=0x7f050015;
-        public static final int drawer_open=0x7f050014;
-        public static final int error_field_required=0x7f050021;
-        public static final int error_incorrect_password=0x7f050020;
-        public static final int error_invalid_email=0x7f05001e;
-        public static final int error_invalid_password=0x7f05001f;
-        public static final int floor_hint=0x7f05000e;
-        public static final int floor_prompt=0x7f050013;
-        public static final int hello_world=0x7f050009;
-        public static final int login=0x7f050004;
-        public static final int login_home=0x7f050002;
-        public static final int login_image=0x7f050005;
-        public static final int login_progress_signing_in=0x7f05001d;
+        public static final int building_hint=0x7f05000e;
+        public static final int building_prompt=0x7f050013;
+        public static final int city_hint=0x7f05000d;
+        public static final int city_prompt=0x7f050012;
+        public static final int countryPrompt=0x7f050017;
+        public static final int country_hint=0x7f05000b;
+        public static final int country_prompt=0x7f050010;
+        public static final int drawer_close=0x7f050016;
+        public static final int drawer_open=0x7f050015;
+        public static final int error_field_required=0x7f050022;
+        public static final int error_incorrect_password=0x7f050021;
+        public static final int error_invalid_email=0x7f05001f;
+        public static final int error_invalid_password=0x7f050020;
+        public static final int floor_hint=0x7f05000f;
+        public static final int floor_prompt=0x7f050014;
+        public static final int hello_world=0x7f05000a;
+        public static final int launch_mission=0x7f050002;
+        public static final int login=0x7f050005;
+        public static final int login_home=0x7f050003;
+        public static final int login_image=0x7f050006;
+        public static final int login_progress_signing_in=0x7f05001e;
         /**  Strings related to login 
          */
-        public static final int prompt_email=0x7f050018;
-        public static final int prompt_password=0x7f050019;
-        public static final int prompt_username=0x7f050003;
-        public static final int state_hint=0x7f05000b;
-        public static final int state_prompt=0x7f050010;
-        public static final int title_activity_drawer=0x7f050007;
-        public static final int title_activity_login=0x7f050017;
-        public static final int title_activity_main=0x7f050006;
-        public static final int title_activity_select_location=0x7f050008;
->>>>>>> FETCH_HEAD
+        public static final int prompt_email=0x7f050019;
+        public static final int prompt_password=0x7f05001a;
+        public static final int prompt_username=0x7f050004;
+        public static final int state_hint=0x7f05000c;
+        public static final int state_prompt=0x7f050011;
+        public static final int title_activity_drawer=0x7f050008;
+        public static final int title_activity_login=0x7f050018;
+        public static final int title_activity_main=0x7f050007;
+        public static final int title_activity_select_location=0x7f050009;
     }
     public static final class style {
         /** 
