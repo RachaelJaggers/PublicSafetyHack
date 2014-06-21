@@ -45,32 +45,47 @@
         android:text="@string/team_members"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <RadioGroup
-        android:id="@+id/radioGroup1"
+    <CheckBox
+        android:id="@+id/checkBox1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_x="150dp"
-        android:layout_y="125dp" >
+        android:layout_y="120dp"
+        android:checked="true"
+        android:text="@array/team_array" />
+    
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="150dp"
+        android:layout_y="160dp"
+        android:text="@array/team_array" />
 
-        <RadioButton
-            android:id="@+id/radio0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="@string-array/team_array" />
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="150dp"
+        android:layout_y="200dp"
+        android:text="@array/team_array" />
 
-        <RadioButton
-            android:id="@+id/radio1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string-array/team_array" />
-
-        <RadioButton
-            android:id="@+id/radio2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string-array/team_array" />
-    </RadioGroup>
+<CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="150dp"
+        android:layout_y="240dp"
+        android:checked="true"
+        android:text="@array/team_array" />
+    
+    <CheckBox
+        android:id="@+id/checkBox5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="150dp"
+        android:layout_y="280dp"
+        android:text="@array/team_array" />
     
     <Button
         android:id="@+id/button1"
@@ -79,5 +94,6 @@
         android:layout_x="60dp"
         android:layout_y="350dp"
         android:text="@string/launch_mission" />
+
 
 </AbsoluteLayout>
