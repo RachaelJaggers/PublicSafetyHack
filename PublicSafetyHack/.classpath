@@ -5,13 +5,11 @@
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
-	<classpathentry kind="src" path="libs"/>
-	<classpathentry kind="lib" path="/Users/rachaeljaggers/Documents/workspace/PublicSafetyHack/PublicSafetyHack/libs/google-gson-2.2.4.jar"/>
-	<classpathentry kind="lib" path="/Users/rachaeljaggers/Documents/workspace/PublicSafetyHack/PublicSafetyHack/libs/m2x-android-sdk.jar"/>
-	<classpathentry kind="lib" path="/Users/rachaeljaggers/Documents/workspace/PublicSafetyHack/PublicSafetyHack/libs/gson-2.2.4-sources.jar"/>
-	<classpathentry kind="lib" path="/Users/rachaeljaggers/Documents/workspace/PublicSafetyHack/PublicSafetyHack/libs/gson-2.2.4-javadoc.jar"/>
-	<classpathentry kind="lib" path="/Users/rachaeljaggers/Documents/workspace/PublicSafetyHack/PublicSafetyHack/libs/gson-2.2.4.jar"/>
-	<classpathentry kind="lib" path="/Users/rachaeljaggers/Documents/workspace/PublicSafetyHack/PublicSafetyHack/libs/android-async-http-1.4.4.jar"/>
-	<classpathentry kind="lib" path="/Users/rachaeljaggers/Documents/workspace/PublicSafetyHack/PublicSafetyHack/libs/android-support-v4.jar"/>
+	<classpathentry kind="lib" path="libs/android-async-http-1.4.4.jar"/>
+	<classpathentry kind="lib" path="libs/android-support-v4.jar"/>
+	<classpathentry kind="lib" path="libs/gson-2.2.4-javadoc.jar"/>
+	<classpathentry kind="lib" path="libs/gson-2.2.4-sources.jar"/>
+	<classpathentry kind="lib" path="libs/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="libs/m2x-android-sdk.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
