@@ -11,7 +11,7 @@ var io = require('socket.io').listen(server)
 // MySQL Connector
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
-  host     : '10.202.38.140',
+  host     : 'localhost',
   database : 'PublicSafetyApp',
   user     : 'root',
   password : ''
@@ -19,6 +19,16 @@ var connection = mysql.createConnection({
 
 var port = process.env.PORT || 8070;
 server.listen(port);
+
+app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', 'http://dev.publicsafetyapp.com');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+
+    // Pass to next layer of middleware
+    next();
+});
 
 console.log("Running");
 
@@ -65,8 +75,8 @@ app.post('/api/event/create', function(req,res){
 });
 
 // Get Responders
-app.post('/api/responder/list',function(req,res){
-	connection.query('SELECT r.ResponderID, r.FirstName, r.LastName FROM Responder r WHERE r.OrganizationID = ' + req.session.OrganizationID, function(err, rows, fields) {
+app.get('/api/responder/list',function(req,res){
+	connection.query('SELECT r.ResponderID, r.FirstName, r.LastName FROM Responder r WHERE r.OrganizationID = ' + req.query.OrganizationID, function(err, rows, fields) {
 		if (err) throw err;
 		res.send(rows);
 	});
