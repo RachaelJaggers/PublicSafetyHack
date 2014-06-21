@@ -1,4 +1,4 @@
-package com.att.publicsafetyhack
+package com.att.publicsafetyhack;
 
 import android.widget.ToggleButton;
 import android.app.Activity;

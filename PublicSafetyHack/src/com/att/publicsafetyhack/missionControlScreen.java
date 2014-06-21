@@ -1,8 +1,8 @@
-package com.att.publicsafetyhack
+//package com.att.publicsafetyhack
 
-import sofia.app.Screen;
+//import sofia.app.Screen;
 
-public class missionControlScreen extends Screen
+/*public class missionControlScreen extends Screen
 {
     public void initialize()
     {
@@ -10,3 +10,4 @@ public class missionControlScreen extends Screen
     }
 
 }
+*/
