@@ -16,4 +16,9 @@
     <string name="login">Login</string>
     <string name="login_image">login</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="member">Member</string>
+    <string name="time_elapsed">Time Elapsed</string>
+    <string name="in_out">In/Out</string>
+    <string name="horiz_line">----------------------------------------------------</string>
+    <string name="temp_time">00:00</string>
 </resources>
