@@ -1,4 +1,4 @@
-package cs2114.restaurant;
+package com.att.publicsafetyhack;
 
 import android.widget.ImageView;
 import android.widget.ToggleButton;
@@ -51,7 +51,7 @@ public class Timer
             setContentView(R.layout.missioncontrolscreen);
 
             textTimer = (TextView)findViewById(R.id.textTimer);
-            image1 = (ImageView)findViewById(R.id.image1);
+            //image1 = (ImageView)findViewById(R.id.image1);
 
 
 

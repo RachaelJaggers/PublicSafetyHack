@@ -1,4 +1,4 @@
-package cs2114.restaurant;
+package com.att.publicsafetyhack;
 
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -28,7 +28,7 @@ public class accelerometerActivity
 
         setContentView(R.layout.missioncontrolscreen);
 
-        image1 = (ImageView)findViewById(R.id.image1);
+        //image1 = (ImageView)findViewById(R.id.image1);
 
 
         manager = (SensorManager)getSystemService(SENSOR_SERVICE);
