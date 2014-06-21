@@ -28,7 +28,9 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int custom_button=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
+        public static final int round=0x7f020002;
     }
     public static final class id {
         public static final int action_settings=0x7f0a0016;
@@ -41,6 +43,7 @@ public final class R {
         public static final int login_form=0x7f0a0002;
         public static final int login_status=0x7f0a0000;
         public static final int login_status_message=0x7f0a0001;
+        public static final int mission_control=0x7f0a0012;
         public static final int prompt_password=0x7f0a0005;
         public static final int prompt_username=0x7f0a0004;
         public static final int radio0=0x7f0a000e;
@@ -52,7 +55,6 @@ public final class R {
         public static final int textView2=0x7f0a000a;
         public static final int textView3=0x7f0a000c;
         public static final int textView4=0x7f0a0013;
-        public static final int toggle1=0x7f0a0012;
         public static final int toggleButton1=0x7f0a0015;
     }
     public static final class layout {
@@ -108,11 +110,13 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f070002;
+        public static final int AppBaseTheme=0x7f070004;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f070000;
+        public static final int ControllerInfoContainer=0x7f070002;
         public static final int LoginFormContainer=0x7f070001;
+        public static final int textcolor=0x7f070003;
     }
 }

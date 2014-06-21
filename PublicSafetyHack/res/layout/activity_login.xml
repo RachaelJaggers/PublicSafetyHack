@@ -35,10 +35,13 @@
     <ScrollView
         android:id="@+id/login_form"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent" 
+        android:background="#F8F8F8" >
 
         <LinearLayout
             style="@style/LoginFormContainer"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
             android:orientation="vertical" >
 
             <ImageView
@@ -51,37 +54,47 @@
                 android:contentDescription="@string/login_image"
                 android:src="@drawable/ic_launcher" />
 
+    	<RelativeLayout
+    		android:layout_width="match_parent"
+    		android:layout_height="match_parent"
+   			tools:context=".RoundedCornerEditText" >
+   			
             <EditText
                 android:id="@+id/prompt_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/prompt_username"
+                android:background="@drawable/round"
                 android:inputType="text"
                 android:maxLines="1"
                 android:singleLine="true" />
-
             <EditText
                 android:id="@+id/prompt_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
                 android:hint="@string/prompt_password"
                 android:imeActionId="@+id/login"
                 android:imeActionLabel="@string/prompt_password"
                 android:imeOptions="actionUnspecified"
+                android:background="@drawable/round"
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:singleLine="true" />
+		</RelativeLayout>
 
-            <Button
-                android:id="@+id/login_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:gravity="center"
-                android:paddingLeft="32dp"
-                android:paddingRight="32dp"
-                android:text="@string/login" />
+    	<Button
+    	    android:id="@+id/login_button"
+    	    android:layout_width="222dp"
+    	    android:layout_height="30dp"
+    	    android:layout_marginTop="30dp"
+    	    android:background="@drawable/custom_button"
+    	    android:gravity="center"
+    	    android:paddingLeft="32dp"
+    	    android:paddingRight="32dp"
+    	    android:text="@string/login"
+    	    android:textColor="#ffffff" />
+
         </LinearLayout>
 
     </ScrollView>
