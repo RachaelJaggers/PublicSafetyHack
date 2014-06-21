@@ -1,5 +1,6 @@
-package cs2114.restaurant;
+package com.att.publicsafetyhack
 
+import android.widget.ToggleButton;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
@@ -25,31 +26,62 @@ public class Timer
         long             finalTime     = 0L;
 
 
+        public void onToggleClicked(View view) {
+            boolean on = ((ToggleButton)view).isChecked();
+            if (on)
+            {
+                //
+            }
+            else
+            {
+
+            }
+        }
+
+
         public void onCreate(Bundle savedInstanceState)
         {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.missioncontrolscreen);
 
-           // textTimer = (TextView) findViewById(R.id.textTimer);
+            textTimer = (TextView)findViewById(R.id.textTimer);
+
+
 
         }
 
         private Runnable updateTimerMethod = new Runnable() {
 
-            public void run() {
-            timeInMillies = SystemClock.uptimeMillis() - startTime;
-            finalTime = timeSwap + timeInMillies;
-            int seconds = (int) (finalTime / 1000);
-            int minutes = seconds / 60;
-            seconds = seconds % 60;
-            int milliseconds = (int) (finalTime % 1000);
-            textTimer.setText("" + minutes + ":"
-              + String.format("%02d", seconds) + ":"
-              + String.format("%03d", milliseconds));
-            myHandler.postDelayed(this, 0);
-           }
+                                               public void run()
+                                               {
+                                                   timeInMillies =
+                                                       SystemClock
+                                                           .uptimeMillis()
+                                                           - startTime;
+                                                   finalTime =
+                                                       timeSwap + timeInMillies;
+                                                   int seconds =
+                                                       (int)(finalTime / 1000);
+                                                   int minutes = seconds / 60;
+                                                   seconds = seconds % 60;
+                                                   int milliseconds =
+                                                       (int)(finalTime % 1000);
+                                                   textTimer.setText(""
+                                                       + minutes
+                                                       + ":"
+                                                       + String.format(
+                                                           "%02d",
+                                                           seconds)
+                                                       + ":"
+                                                       + String.format(
+                                                           "%03d",
+                                                           milliseconds));
+                                                   myHandler.postDelayed(
+                                                       this,
+                                                       0);
+                                               }
 
-          };
+                                           };
     }
 
 }
