@@ -9,13 +9,14 @@ package com.att.publicsafetyhack;
 
 public final class R {
     public static final class array {
-        public static final int buildingArrayDallas=0x7f060004;
-        public static final int cityArrayTexas=0x7f060003;
-        public static final int countryArray=0x7f060001;
-        public static final int dateArray=0x7f060006;
-        public static final int drawer_array=0x7f060000;
-        public static final int floorArray2=0x7f060005;
-        public static final int stateArrayUSA=0x7f060002;
+        public static final int buildingArrayDallas=0x7f060005;
+        public static final int cityArrayTexas=0x7f060004;
+        public static final int countryArray=0x7f060002;
+        public static final int dateArray=0x7f060007;
+        public static final int drawer_array=0x7f060001;
+        public static final int floorArray2=0x7f060006;
+        public static final int stateArrayUSA=0x7f060003;
+        public static final int team_array=0x7f060000;
     }
     public static final class attr {
     }
@@ -88,12 +89,12 @@ public final class R {
         public static final int floor_hint=0x7f050012;
         public static final int floor_prompt=0x7f050017;
         public static final int hello_world=0x7f05000d;
-        public static final int launch_mission=0x7f050002;
+        public static final int launch_mission=0x7f050003;
         public static final int login=0x7f050008;
         public static final int login_home=0x7f050006;
         public static final int login_image=0x7f050009;
         public static final int login_progress_signing_in=0x7f050021;
-        public static final int mission=0x7f050003;
+        public static final int mission=0x7f050002;
         /**  Strings related to login 
          */
         public static final int prompt_email=0x7f05001c;
