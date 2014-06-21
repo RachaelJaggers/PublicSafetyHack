@@ -1,4 +1,4 @@
-package cs2114.restaurant;
+package com.att.publicsafetyhack;
 
 import android.graphics.Color;
 import android.view.View;

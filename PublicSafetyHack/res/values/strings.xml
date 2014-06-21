@@ -2,11 +2,8 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
     <string name="app_name">Hackathon</string>
     <string name="action_settings">Settings</string>
-<<<<<<< HEAD
     <string name="login_home">Welcome to Hackathon</string>
-    <string name="prompt_username">Username</string>
-=======
-    
+    <string name="prompt_username">Username</string>    
     <string name="mission">Mission #001</string>
     <string name="launch_mission">Launch Mission</string>
     <string name="address">Address</string>
@@ -16,10 +13,6 @@
         <item>H. Smith</item>
         <item>P. Rodriguez</item>
     </string-array>
-    
-    <string name="login_home">Welcome to YourSpace</string>
-    <string name="prompt_username">ATT UID</string>
->>>>>>> c0c3bf14a56020f63e205cf145eedb357f02fc3e
     <string name="login">Login</string>
     <string name="login_image">login</string>
     <string name="title_activity_main">MainActivity</string>
