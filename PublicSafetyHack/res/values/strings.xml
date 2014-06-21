@@ -4,6 +4,9 @@
     <string name="app_name">YourSpace</string>
     <string name="action_settings">Settings</string>
     <string name="launch_mission">Launch Mission</string>
+    <string name="mission">Mission #001</string>
+    <string name="address">Address</string>
+    <string name="team_members">Team Members</string>
     <string name="login_home">Welcome to YourSpace</string>
     <string name="prompt_username">ATT UID</string>
     <string name="login">Login</string>
