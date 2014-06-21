@@ -1,19 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
-    <string name="app_name">Hackathon</string>
+
+    <string name="app_name">YourSpace</string>
     <string name="action_settings">Settings</string>
-    <string name="login_home">Welcome to Hackathon</string>
-    <string name="prompt_username">Username</string>    
-    <string name="mission">Mission #001</string>
     <string name="launch_mission">Launch Mission</string>
+    <string name="mission">Mission #001</string>
     <string name="address">Address</string>
     <string name="team_members">Team Members</string>
-    <string-array name="team_array">
-    	<item>J. Doe</item>
-        <item>H. Smith</item>
-        <item>P. Rodriguez</item>
-    </string-array>
+    <string name="login_home">Welcome to YourSpace</string>
+    <string name="prompt_username">ATT UID</string>
     <string name="login">Login</string>
     <string name="login_image">login</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_drawer">DrawerActivity</string>
+    <string name="title_activity_select_location">Select Location</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="country_hint">Select Country&#8230;</string>
+    <string name="state_hint">Select State&#8230;</string>
+    <string name="city_hint">Select City&#8230;</string>
+    <string name="building_hint">Select Building&#8230;</string>
+    <string name="floor_hint">Select Floor&#8230;</string>
+    <string name="country_prompt">Select Country</string>
+    <string name="state_prompt">Select State</string>
+    <string name="city_prompt">Select City</string>
+    <string name="building_prompt">Select Building</string>
+    <string name="floor_prompt">Select Floor</string>
+
+    <string-array name="drawer_array">
+        <item>List</item>
+        <item>Map</item>
+        <item>Quick Reserve</item>
+        <item>Reservations</item>
+        <item>Favorites</item>
+        <item>Profile</item>
+        <item>About</item>
+        <item>Logout</item>
+    </string-array>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="countryPrompt">Pick Your Country.</string>
+
+    <string-array name="countryArray">
+        <item>USA</item>
+        <item>UK</item>
+        <item>Germany</item>
+        <item>France</item>
+        <item>Netherlands</item>
+        <item>Belgium</item>
+        <item>Spain</item>
+        <item>Slovakia</item>
+        <item>Czech Republic</item>
+        <item>Italy</item>
+        <item>Sweden</item>
+        <item>Switzerland</item>
+        <item>Turkey</item>
+    </string-array>
+    <string-array name="stateArrayUSA">
+        <item>TX</item>
+        <item>GA</item>
+        <item>NJ</item>
+        <item>IL</item>
+    </string-array>
+    <string-array name="cityArrayTexas">
+        <item>Dallas</item>
+        <item>San Antonio</item>
+    </string-array>
+    <string-array name="buildingArrayDallas">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="floorArray2">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+    </string-array>
+    <string-array name="dateArray">
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+    </string-array>
+
 </resources>

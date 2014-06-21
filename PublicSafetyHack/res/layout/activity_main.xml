@@ -6,12 +6,20 @@
     tools:context="com.att.publicsafetyhack.MainActivity"
     tools:ignore="MergeRootFrame" >
 
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_x="60dp"
+        android:layout_y="300dp"
+        android:text="@string/launch_mission" />
+
     <TextView
         android:id="@+id/textView1"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_x="10dp"
-        android:layout_y="25dp"
+        android:layout_y="10dp"
         android:text="@string/mission"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -45,55 +53,31 @@
         android:text="@string/team_members"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <CheckBox
-        android:id="@+id/checkBox1"
+    <RadioGroup
+        android:id="@+id/radioGroup1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_x="150dp"
-        android:layout_y="120dp"
-        android:checked="true"
-        android:text="@array/team_array" />
-    
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="150dp"
-        android:layout_y="160dp"
-        android:text="@array/team_array" />
+        android:layout_y="125dp" >
 
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="150dp"
-        android:layout_y="200dp"
-        android:text="@array/team_array" />
+        <RadioButton
+            android:id="@+id/radio0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="RadioButton" />
 
-	<CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="150dp"
-        android:layout_y="240dp"
-        android:checked="true"
-        android:text="@array/team_array" />
-    
-    <CheckBox
-        android:id="@+id/checkBox5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="150dp"
-        android:layout_y="280dp"
-        android:text="@array/team_array" />
-   
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_x="60dp"
-        android:layout_y="350dp"
-        android:text="@string/launch_mission" />
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RadioButton" />
 
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RadioButton" />
+    </RadioGroup>
 
 </AbsoluteLayout>
