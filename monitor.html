@@ -1,0 +1,163 @@
+<html >
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:300|Oswald|Share+Tech+Mono' rel='stylesheet' type='text/css'>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+		<script src="/js/underscore.js"></script>
+		<script src="/js/app.js"></script>
+
+		<style type="text/css">
+			html,body{
+				background:#272727;
+				color:#ccc;
+				font-family: 'Oswald', sans-serif;
+				font-size:16px;
+			}
+			
+			.indicator{
+				width:200px;
+				height:200px;
+				border-radius:50%;
+				background:#92c004;
+				border-color:#92c004;
+			}
+			
+				.indicator-yellow{
+					background:#c09f04;
+					border-color:#c09f04;
+				}
+				
+				.indicator-red{
+					background:#c02c04;
+					border-color:#c02c04;
+				}
+				
+				
+			
+			.rosterResponders ul{
+				padding:0;
+				margin:0;
+				list-style:none;
+				width:100%;
+			}
+			
+				.rosterResponders ul li{
+					display:block;
+					padding:30px 0;
+					border-bottom:1px solid #000;
+					background:#232323;
+					margin-bottom:2px;
+				}
+				
+			.btn{
+				background:#404040;
+				padding:15px 25px;
+				text-decoration:none;
+				color:#fff;
+				font-family: 'Raleway', sans-serif;
+			}
+			
+				.btn:hover{
+					background:#92c004;
+				}
+				
+			.addToRoster{
+				float:right;
+				margin-top:-13px;
+			}
+			
+				.addToRoster em{
+					display:none;
+				}
+			
+			.btnPressed{
+				background:#92c004;
+			}
+			
+				.btnPressed span{
+					display:none;
+				}
+				
+				.btnPressed em{
+					display:block;
+				}
+			
+			.content{
+				width:94%;
+				margin:auto;
+			}
+			
+			.numbers{
+				font-family: 'Share Tech Mono';
+			}
+			
+			.overwatch{
+			
+			}
+			
+				.overwatch ul{
+					padding:0;
+					margin:0;
+					list-style:none;
+				}
+				
+					.overwatch ul li{
+						width:31%;
+						float:left;
+						margin-left:1%;
+						margin-bottom:20px;
+					}
+					
+						.overwatch ul li span{
+							font-size: 33px;
+							display: block;
+							text-align:center;
+							margin: auto;
+							padding-top: 70px;
+						}
+		</style>
+		
+	</head>
+	<body ng-app="psApp" ng-controller="monitorController">
+		<div ng-hide="!start" class="start">
+			<br /><br /><br /><br />
+			<center>
+				<a href="#" class="btn" ng-click="createEvent()">Create Event</a>
+			</center>
+		</div>
+	
+		<div ng-hide="!roster" class="rosterResponders">
+			<ul>
+				<li ng-repeat="responder in responders">
+					<div class="content">
+						{{responder.LastName}}, {{responder.FirstName}}
+						<a href="#" class="addToRoster btn" ng-click="addToRoster(responder.ResponderID)" ng-hide="click"><span>Add To Roster</span><em>Added</em></a>
+					</div>
+				</li>
+			</ul>
+			<br /><br /><br />
+			<center>
+				<a href="#" class="btn" ng-click="overwatch()">Roll Out</a>
+			</center>
+		</div>
+		
+		<div class="overwatch" ng-hide="!overwatch">
+			<ul>
+				<li ng-repeat="movement in movements">
+					
+					<div ng-if="movement.Movement > 49" class="indicator" data-time="{{movement.Time}}">
+						<span></span>
+					</div>
+					<div ng-if="movement.Movement < 40 && movement.Movement > 29" class="indicator indicator-yellow" data-time="{{movement.Time}}">
+						<span></span>
+					</div>
+					<div ng-if="movement.Movement < 30" class="indicator indicator-red" data-time="{{movement.Time}}">
+						<span></span>
+					</div>
+				</li>
+			</div>
+		</div>
+		<!-- <div class="indicator"></div> -->
+		
+	</body>
+</html>

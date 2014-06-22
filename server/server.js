@@ -32,7 +32,7 @@ app.use(function (req, res, next) {
 
 console.log("Running");
 
-//app.use(bodyParser());
+app.use(bodyParser.json());
 
 // User Login
 app.post('/api/login',function(req,res){
@@ -58,15 +58,15 @@ app.post('/api/login',function(req,res){
 // Need to sanitize user inputs
 
 // Create Event
-app.post('/api/event/create', function(req,res){
-	var eventName = req.body.EventName;
-	var eventDescription = req.body.EventDescription;
-	connection.query('INSERT INTO Event (EventName, EventDescription) VALUES ( "' + eventName + '","' + eventDescription + '")', function(err, result) {
+app.get('/api/event/create', function(req,res){
+	var eventName = 'New Event';
+	connection.query('INSERT INTO Event (EventName) VALUES ( "' + eventName + '")', function(err, result) {
 		if (err) throw err;
 		// create event
 		// add event id to session
-		req.session.EventID = result.insertID;
-		res.send({status:200,EventID:result.insertID});
+		//console.log({EventID:result.insertId});
+		res.send({EventID:result.insertId});
+		
 		// otherwise
 		//event creation error
 		//res.send(ERROR CODE);
@@ -85,7 +85,7 @@ app.get('/api/responder/list',function(req,res){
 // Add Responder to Roster
 app.post('/api/roster/add', function(req,res){
 	var responderID = req.body.ResponderID;
-	var eventID = req.body.RequestID;
+	var eventID = req.body.EventID;
 	
 	connection.query('INSERT INTO ResponderEvent (ResponderID, EventID) VALUES ( ' + responderID + ',' + eventID + ')', function(err, result) {
 		if (err) throw err;
@@ -126,19 +126,21 @@ app.post('/api/responder/activity',function(req,res){
 });
 
 // Set Responder Movement
-app.post('api/responder/set-movement',function(req,res){
-	var responderID = req.body.ResponderID;
-	var eventID = req.body.EventID;
-	var movement = req.body.Movement;
-	connection.query('INSERT INTO Movement (ResponderID, EventID, Movement) VALUES ( ' + responderID + ',' + eventID + ',"' + activityValue + ',' + movement + ')', function(err, rows, fields) {
+app.get('/api/responder/set-movement',function(req,res){
+	var responderID = req.query.ResponderID;
+	var eventID = req.query.EventID;
+	var movement = req.query.Movement;
+	console.log(req.query);
+	connection.query('INSERT INTO Movement (ResponderID, EventID, Movement) VALUES ( ' + responderID + ',' + eventID + ',' + movement + ')', function(err, rows, fields) {
 		if (err) throw err;
+		//send({status:200});
 	});
 });
 
 // Get Responder Movement
-app.post('api/responder/get-movement',function(req,res){
+app.post('/api/responder/get-movement',function(req,res){
 	var eventID = req.body.EventID;
-	connection.query('SELECT m.ResponderID, m.EventID, m.Movement, m.Time FROM Movement m WHERE m.EventID = ' + eventID,function(err, rows, fields){
+	connection.query('SELECT DISTINCT(m.ResponderID), m.EventID, m.Movement, m.Time FROM Movement m WHERE m.EventID = 1 ORDER BY ResponderID DESC LIMIT 0,6',function(err, rows, fields){
 		//send responder movements
 		res.send(rows);
 	});
